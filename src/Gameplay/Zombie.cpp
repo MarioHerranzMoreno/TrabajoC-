@@ -31,7 +31,7 @@ void Zombie::shoot(sf::Vector2f mouse)
 	Projectile p;
 	Projectile::ProjectileDescriptor desc;
 	desc.target = mouse;
-	desc.speed = { 400.f, 200.f };
+	desc.speed = { 350.f, 350.f };
 	desc.position = m_position;
 	p.init(desc);
 	m_p.push_back(p);
@@ -60,5 +60,11 @@ void Zombie::render(sf::RenderWindow& window)
 		p.render(window);
 	}
 	
+}
+
+
+std::vector<Projectile>& Zombie::getProjectiles()
+{
+	return m_p;
 }
 	

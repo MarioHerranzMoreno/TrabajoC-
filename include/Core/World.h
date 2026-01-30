@@ -3,6 +3,9 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics.hpp>
 #include <cstdint>
+#include <vector>
+#include <Gameplay/Projectile.h>
+#include <Gameplay/Cultist.h>
 
 class Enemy;
 
@@ -33,6 +36,10 @@ class World
 		void render(sf::RenderWindow& window);
 
 		void onClick(sf::Vector2f mPos);
+		void spawnEnemy();
+
+		float spawnRate;
+
 
 
 	private:
@@ -45,4 +52,5 @@ class World
 		MapLayer* m_layerZero{ nullptr };
 		MapLayer* m_layerOne{ nullptr };
 		MapLayer* m_layerTwo{ nullptr };
+		std::vector<Cultist> m_c;
 };

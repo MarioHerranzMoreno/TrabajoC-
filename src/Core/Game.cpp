@@ -53,10 +53,12 @@ void Game::update(uint32_t deltaMilliseconds)
 		if (event.type == sf::Event::MouseButtonPressed && canShoot == true)
 		{
 			//TODO las putas comprobaciones y llamar al clic
-			if(event.mouseButton.button == sf::Mouse::Left)
+			if (event.mouseButton.button == sf::Mouse::Left) 
+			{
 			onClick(*m_window);
 			timer = 0;
 			canShoot = false;
+			}
 		}
 	}
 	std::cout << timer << std::endl;

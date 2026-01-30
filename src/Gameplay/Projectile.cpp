@@ -18,7 +18,7 @@ bool Projectile::init(const ProjectileDescriptor&  projectileDescriptor)
 
 	shape.setOrigin(-8.f,-8.f);
 	shape.setFillColor(sf::Color(250, 100, 00));
-	shape.setRadius(10.f);
+	shape.setRadius(15.f);
 	shape.setPosition(m_position);
 
 	return true;

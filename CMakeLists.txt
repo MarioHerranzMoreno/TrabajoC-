@@ -33,7 +33,7 @@ set(PROJECT_HEADERS
     include/Gameplay/Zombie.h
     include/Gameplay/Projectile.h
     include/Gameplay/ObjectPool.h
-    include/Gameplay/Enemies.h
+    include/Gameplay/Cultist.h
 
     include/Render/SFMLOrthogonalLayer.h
 
@@ -49,7 +49,7 @@ set(PROJECT_SOURCES
     src/Gameplay/Enemy.cpp
     src/Gameplay/Projectile.cpp
     src/Gameplay/Zombie.cpp
-    src/Gameplay/Enemies.cpp
+    src/Gameplay/Cultist.cpp
 
     src/main.cpp
 )

@@ -22,6 +22,7 @@ class Zombie : public Enemy
 
 		void render(sf::RenderWindow& window) override;
 
+		std::vector<Projectile>& getProjectiles();
 
 	private:
 
