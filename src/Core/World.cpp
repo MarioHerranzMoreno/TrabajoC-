@@ -59,10 +59,15 @@ bool World::load()
 	return initOk;
 }
 
-void World::update(uint32_t deltaMilliseconds)
+void World::update(uint32_t deltaMilliseconds, sf::RenderWindow& window)
 {
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+		window.close();
+
 	if (gameOver)
 	{
+
 		gameOverText.setString("Your score:" + std::to_string(static_cast<int>(points)));
 		return;
 	}
@@ -151,6 +156,7 @@ void World::update(uint32_t deltaMilliseconds)
 
 void World::render(sf::RenderWindow& window)
 {
+
 	window.draw(*m_layerZero);
 	window.draw(*m_layerOne);
 	window.draw(*m_layerTwo);

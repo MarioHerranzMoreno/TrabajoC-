@@ -80,7 +80,7 @@ void Game::update(uint32_t deltaMilliseconds)
 			}
 		}
 	}
-	m_world->update(deltaMilliseconds);
+	m_world->update(deltaMilliseconds, *m_window);
 }
 
 

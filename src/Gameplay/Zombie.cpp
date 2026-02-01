@@ -59,7 +59,6 @@ void Zombie::shootS(sf::Vector2f mouse)
 
 void Zombie::update(float deltaMilliseconds)
 {
-
 	//Move
 	m_direction = { 0.f, 0.f };
 

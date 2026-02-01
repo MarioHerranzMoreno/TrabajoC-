@@ -30,7 +30,7 @@ class World
 		bool load();
 
 
-		void update(uint32_t deltaMilliseconds);
+		void update(uint32_t deltaMilliseconds, sf::RenderWindow& window);
 		void render(sf::RenderWindow& window);
 
 		void onClick(sf::Vector2f mPos);
