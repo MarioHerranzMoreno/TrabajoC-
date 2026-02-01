@@ -11,4 +11,4 @@
 </p>
 
 # Visual of the game
-![Survive the cult](https://github.com/MarioHerranzMoreno/TrabajoC-/blob/main/CapturaClase.png)
+![Survive the cult](https://github.com/MarioHerranzMoreno/TrabajoC-/blob/main/CapturaClase2.png)
