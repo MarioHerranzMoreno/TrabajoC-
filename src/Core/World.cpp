@@ -85,7 +85,7 @@ void World::update(uint32_t deltaMilliseconds, sf::RenderWindow& window)
 		spawnRate = 0;
 		spawnEnemy();
 	}
-	if (difficultyCounter >= 14000 && enemyRate > 200)
+	if (difficultyCounter >= 14000 && enemyRate > 100)
 	{
 		enemyRate -= 100;
 		difficultyCounter = 0;

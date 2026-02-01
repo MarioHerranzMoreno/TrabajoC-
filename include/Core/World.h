@@ -38,7 +38,7 @@ class World
 		void spawnEnemy();
 
 
-		float enemyRate = 1000;
+		float enemyRate = 800;
 		float spawnRate;
 		float difficultyCounter;
 
