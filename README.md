@@ -11,4 +11,4 @@
 </p>
 
 # Visual of the game
-![Pinky Jump](https://github.com/Crihhh/Pinky-Jump/blob/main/PinkyJump.png)
+![Survive the cult](https://github.com/MarioHerranzMoreno/TrabajoC-/blob/main/CapturaClase.png)
