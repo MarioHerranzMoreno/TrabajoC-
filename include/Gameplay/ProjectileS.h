@@ -3,38 +3,38 @@
 #include <Gameplay/Enemy.h>
 #include <SFML/Graphics.hpp>
 #include <Gameplay/GameObject.h>
-#include <Gameplay/Projectile.h>
 
 
-class Cultist : public GameObject
+class ProjectileS : public GameObject
 {
 	public:
 
-		struct CultistDescriptor
+		struct ProjectileSDescriptor
 		{
-			sf::Vector2f speed{ .0f, .0f };
-			sf::Vector2f target{ .0f, .0f };
 			sf::Vector2f position{ .0f, .0f };
 		};
 
-		bool init(const CultistDescriptor& cultistDescriptor);
+		bool init(const ProjectileSDescriptor& projectileSDescriptor);
 		
 
 		void update(float deltaMilliseconds) override;
 		void render(sf::RenderWindow& window) override;
 
+		bool isActive() const { return m_active; };
+
 		sf::FloatRect getBounds() const;
 
+		float cd = 0;
+		float cdLimit = 11;
+
+		float pRadius = 50.f;
 
 
 	private:
 
-		sf::Vector2f p_target{.0f,.0f};
-		sf::Vector2f p_direction{ .0f, .0f };
-		sf::Vector2f p_speed{ .0f, .0f };
+		bool m_active = true;
 		sf::Sprite p_sprite;
-		
 		float p_tileWidth{ .0f };
 		float p_tileHeight{ .0f };
-		sf::RectangleShape shape;
+		sf::CircleShape shape;
 };

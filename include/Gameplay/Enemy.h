@@ -24,6 +24,9 @@ class Enemy : public GameObject
 		void render(sf::RenderWindow& window) override;
 
 		virtual void onClick(sf::Vector2f mPos) = 0;
+		virtual void onClickS(sf::Vector2f mPos) = 0;
+
+
 
 	protected:
 

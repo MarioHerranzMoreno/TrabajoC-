@@ -27,27 +27,34 @@ class World
 
 		~World();
 
-		// TO-DO: Ideally the scene should be read from file.
 		bool load();
 
-		// To-Do: Implement a unload()
 
 		void update(uint32_t deltaMilliseconds);
 		void render(sf::RenderWindow& window);
 
 		void onClick(sf::Vector2f mPos);
+		void onClickS(sf::Vector2f mPos);
 		void spawnEnemy();
 
+
+		float enemyRate = 1000;
 		float spawnRate;
+		float difficultyCounter;
+
+		bool gameOver = false;
 
 
+		float points = 0;
+		sf::Font p_font;
+		sf::Text p_text;
+
+		sf::Text gameOverText;
 
 	private:
 
-		// This is just an example. Think a good way to group the actors of your game. If they need any type of manager, etc...
 		Enemy* m_enemy{ nullptr };
 
-		// To-Do: This should be in its own class, something like "Level" should work
 		tmx::Map* m_map{ nullptr };
 		MapLayer* m_layerZero{ nullptr };
 		MapLayer* m_layerOne{ nullptr };

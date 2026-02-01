@@ -24,7 +24,6 @@ class Projectile : public GameObject
 
 		sf::FloatRect getBounds() const;
 
-		//Projectile();
 
 	private:
 

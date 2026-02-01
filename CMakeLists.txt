@@ -32,6 +32,7 @@ set(PROJECT_HEADERS
     include/Gameplay/GameObject.h
     include/Gameplay/Zombie.h
     include/Gameplay/Projectile.h
+    include/Gameplay/ProjectileS.h
     include/Gameplay/ObjectPool.h
     include/Gameplay/Cultist.h
 
@@ -48,6 +49,7 @@ set(PROJECT_SOURCES
 
     src/Gameplay/Enemy.cpp
     src/Gameplay/Projectile.cpp
+    src/Gameplay/ProjectileS.cpp
     src/Gameplay/Zombie.cpp
     src/Gameplay/Cultist.cpp
 

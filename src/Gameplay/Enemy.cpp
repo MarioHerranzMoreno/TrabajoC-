@@ -18,9 +18,10 @@ void Enemy::update(float deltaMilliseconds)
 
 void Enemy::render(sf::RenderWindow& window)
 {
-	// Extend this mechanism to be able to support animations
 	m_sprite.setTextureRect(sf::IntRect(0, 0, 
 		static_cast<int>(m_tileWidth), static_cast<int>(m_tileHeight)));
 
 	window.draw(m_sprite);
 }
+
+

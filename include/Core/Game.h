@@ -33,9 +33,16 @@ class Game
 		void render();
 
 		void onClick(sf::RenderWindow &window);
+		void onClickS(sf::RenderWindow &window);
 
 		bool canShoot = true;
-		float timer = 20;
+		bool canShoot2 = true;
+		float timer1 = 20;
+		float timer2 = 600;
+
+		float timelimit1 = 300;
+		float timelimit2 = 2000;
+
 
 	private:
 

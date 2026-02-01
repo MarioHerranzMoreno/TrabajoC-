@@ -33,15 +33,28 @@ bool Game::isRunning() const
 
 void Game::update(uint32_t deltaMilliseconds)
 {
-	if (timer < 300) 
+	//Disp1
+	if (timer1 < timelimit1) 
 	{
 		canShoot = false;
-		timer += deltaMilliseconds;
+		timer1 += deltaMilliseconds;
 	}
-	else if (timer >= 300) 
+	else if (timer1 >= timelimit1)
 	{
 		canShoot = true;
 	}
+	//Disp2
+	if (timer2 < timelimit2)
+	{
+		canShoot2 = false;
+		timer2 += deltaMilliseconds;
+	}
+	else if (timer2 >= timelimit2)
+	{
+		canShoot2 = true;
+	}
+
+
 	// Check if user closed the window
 	for (auto event = sf::Event(); m_window->pollEvent(event);)
 	{
@@ -52,18 +65,31 @@ void Game::update(uint32_t deltaMilliseconds)
 
 		if (event.type == sf::Event::MouseButtonPressed && canShoot == true)
 		{
-			//TODO las putas comprobaciones y llamar al clic
 			if (event.mouseButton.button == sf::Mouse::Left) 
 			{
 			onClick(*m_window);
-			timer = 0;
+			timer1 = 0;
 			canShoot = false;
+			}
+
+			if (event.mouseButton.button == sf::Mouse::Right && canShoot2 == true)
+			{
+				onClickS(*m_window);
+				timer2 = 0;
+				canShoot2 = false;
 			}
 		}
 	}
-	std::cout << timer << std::endl;
-	// Update scene here
 	m_world->update(deltaMilliseconds);
+}
+
+
+void Game::onClickS(sf::RenderWindow& window) 
+{
+	//Calculo de ratón
+	sf::Vector2f mouseWorldP = window.mapPixelToCoords(sf::Mouse::getPosition(window));
+
+	m_world->onClickS(mouseWorldP);
 }
 
 void Game::onClick(sf::RenderWindow &window) 

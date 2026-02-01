@@ -14,7 +14,6 @@ bool Projectile::init(const ProjectileDescriptor&  projectileDescriptor)
 	p_target = projectileDescriptor.target;
 
 	
-	//p_sprite.setScale(1, 1);
 
 	shape.setOrigin(-8.f,-8.f);
 	shape.setFillColor(sf::Color(250, 100, 00));
@@ -28,7 +27,6 @@ void Projectile::update(float deltaMilliseconds)
 {
 	const float deltaSeconds = deltaMilliseconds / 1000;
 	sf::Vector2f direction = p_target;
-
 	const float length = std::sqrt(direction.x * direction.x + direction.y * direction.y);
 
 	if (length > 0.001f)
@@ -37,7 +35,6 @@ void Projectile::update(float deltaMilliseconds)
 
 		p_direction = direction;
 	}
-	//p_direction = m_position;
 
 	m_position.x += (p_direction.x * p_speed.x * deltaSeconds);
 	m_position.y += (p_direction.y * p_speed.y * deltaSeconds);
@@ -52,8 +49,6 @@ void Projectile::update(float deltaMilliseconds)
 	std::cout << "=========== Speed ===========" << std::endl;
 	std::cout << "X: " << p_speed.x << "Y: " << p_speed.y << std::endl;*/
 
-	//TODO descubrir donde definir la forma (tamaño textura tal) del proyectil, y descubrir como crear
-	//los proyectiles con el clic
 }
 
 void Projectile::render(sf::RenderWindow& window) 
